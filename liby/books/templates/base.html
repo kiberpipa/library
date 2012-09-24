@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>
+			{% block title %} Knjiznica {% endblock %}
+		</title>
+		<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/site.css" rel="stylesheet">
+		{% block extrahead %}  {% endblock %}
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span2">
+					<ul class="nav nav-tabs nav-stacked side-nav">
+						<li>
+						<a href="#">Home</a>
+						</li>
+						<li>
+						<a href="#">Books</a>
+						</li>
+						<li>
+						<a href="#">Online-Books</a>
+						</li>
+						<li>
+						<a href="/admin/">Admin</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="span10">
+					{% block nonfluid %}  {% endblock %}
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
