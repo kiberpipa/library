@@ -11,12 +11,13 @@ You need `git` installed on your system.
 
 ``bin/buildout``
 
-``bin/django runserver``
-
 Run:
 
 ``bin/django syncdb``
 
 to create the database and make a super user.
+
+
+``bin/django runserver``
 
 Open you browser on localhost:8000
