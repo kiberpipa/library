@@ -37,10 +37,6 @@ class Item(models.Model):
     def __unicode__(self):
             return "%s - %s" % (self.title, self.author)
 
-class OnlineMaterial(Item):
-    """docstring for On"""
-    link = models.URLField()
-
 
 class Book(Item):
     """docstring for P"""

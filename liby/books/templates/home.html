@@ -58,27 +58,4 @@ Seek electricity...........
 				{% endfor %}
 			</table>
 			{% endblock %}
-			<h2>Online Knjige</h2>
-{% block online-table %}
-			<table class="table table-striped table-hover">
-				<tr>
-				  <th>Naslov</th>
-				  <th>Avtor</th>
-				  <th>Leto izdaje</th>
-				  <th>Zaloznik</th>
-				  <th>Zanr</th>
-				  <th>Link</th>
-				</tr>
-				{% for book in online_books %}
-				<tr>
-					<td>{{book.title}}</td>
-					<td>{{book.author}}</td>
-					<td>{{book.pub_date}}</td>
-					<td>{{book.publisher}}</td>
-					<td>{{book.gendre}}</td>
-					<td>{{book.link}}</td>
-				</tr>
-				{% endfor %}
-			</table>
-{% endblock %}
 {% endblock %}
