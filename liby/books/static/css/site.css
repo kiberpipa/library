@@ -1,5 +1,6 @@
-body {
-	padding: 20px;
+.content {
+	padding: 10px;
+	margin-top: 75px;
 }
 
 table {
@@ -22,4 +23,3 @@ table {
 .navbar .navbar-search { margin-top: 20px; margin-left: 10px}
 
 .navbar img {margin: 5px 30px 5px 5px;}
-.content{ margin-top: 75px;}

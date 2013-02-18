@@ -19,23 +19,26 @@
 						<img src="{{ STATIC_URL }}img/logo_clipart2_test2.jpg" ></img>
 						</li>
 						<li>
-						<a href="#">{% trans "O nas" %}</a>
+						<a href="{% url onas %}">{% trans "O nas" %}</a>
 						</li>
 						<li>
 						<a href="#">{% trans "Blog" %}</a>
 						</li>
 						<li>
-						<a href="/admin/">{% trans "Katalog" %}</a>
+						<a href="{% url katalog %}">{% trans "Katalog" %}</a>
 						</li>
 						<li>
-						<a href="/admin/">{% trans "Skener" %}</a>
+						<a href="{% url skener %}">{% trans "Skener" %}</a>
 						</li>
 					</ul>
 					</div>
 					</div>
 
-
-					{% block content %}  {% endblock %}
+					<div class="container">
+						<div class="content">
+							{% block content %}  {% endblock %}
+						</div>
+					</div>
 
 	</body>
 </html>
