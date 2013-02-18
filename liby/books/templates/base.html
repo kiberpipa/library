@@ -1,7 +1,10 @@
+{% load i18n %}
 <html>
 	<head>
 		<title>
-			{% block title %} Knjiznica {% endblock %}
+			{% block title %}
+				{% trans "Library" %}
+			{% endblock %}
 		</title>
 		<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
 		<link href="{{ STATIC_URL }}css/site.css" rel="stylesheet">
@@ -9,30 +12,30 @@
 	</head>
 
 	<body>
-		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span2">
-					<ul class="nav nav-tabs nav-stacked side-nav">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+					<ul class="nav">
 						<li>
-						<a href="#">Home</a>
+						<img src="{{ STATIC_URL }}img/logo_clipart2_test2.jpg" ></img>
 						</li>
 						<li>
-						<a href="#">Books</a>
+						<a href="#">{% trans "O nas" %}</a>
 						</li>
 						<li>
-						<a href="#">Online-Books</a>
+						<a href="#">{% trans "Blog" %}</a>
 						</li>
 						<li>
-						<a href="/admin/">Admin</a>
+						<a href="/admin/">{% trans "Katalog" %}</a>
+						</li>
+						<li>
+						<a href="/admin/">{% trans "Skener" %}</a>
 						</li>
 					</ul>
-				</div>
+					</div>
+					</div>
 
-				<div class="span10">
-					{% block nonfluid %}  {% endblock %}
 
-				</div>
-			</div>
-		</div>
+					{% block content %}  {% endblock %}
+
 	</body>
 </html>

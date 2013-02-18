@@ -9,3 +9,17 @@ table {
 .side-nav {
 	margin: 20px 0 0 0;
 }
+
+.navbar-inner { background:#f6f6f6!important;background-image:none!important;box-shadow:none;filter:none;padding:0;box-shadow:inset 0 0 3px rgba(0,0,0,.2); border: none; }
+.navbar .brand { font-weight:400;font-size:28px;color:#222;padding-top:13px }
+.navbar .brand span { font-size:40px;line-height:0 }
+.navbar .nav>li.active>a,.navbar .nav>li.active:hover>a { background-color:transparent;font-weight:bold;color:#222 }
+.navbar .nav>li.active>a { background-image:url(../images/navbar-active-item.png);background-position:center bottom;background-repeat:no-repeat }
+.navbar .nav>li { margin:0 0 0 10px }
+.navbar .nav>li>a { padding:26px 10px 26px 10px;color:#444!important;font-size:1.1em;text-shadow:0 -1px 0 rgba(255,255,255,0.25) }
+.navbar .nav>li>a:hover { color:#222;text-decoration:underline }
+.navbar .nav>li>button { color:white;margin-top:22px }
+.navbar .navbar-search { margin-top: 20px; margin-left: 10px}
+
+.navbar img {margin: 5px 30px 5px 5px;}
+.content{ margin-top: 75px;}
