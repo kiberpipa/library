@@ -22,7 +22,7 @@
 						<a href="{% url onas %}">{% trans "O nas" %}</a>
 						</li>
 						<li>
-						<a href="#">{% trans "Blog" %}</a>
+						<a href="{% url blog %}">{% trans "Blog" %}</a>
 						</li>
 						<li>
 						<a href="{% url katalog %}">{% trans "Katalog" %}</a>
@@ -33,6 +33,8 @@
 					</ul>
 					</div>
 					</div>
+
+					{% block right_block %}  {% endblock %}
 
 					<div class="container">
 						<div class="content">

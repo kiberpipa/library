@@ -23,3 +23,11 @@ table {
 .navbar .navbar-search { margin-top: 20px; margin-left: 10px}
 
 .navbar img {margin: 5px 30px 5px 5px;}
+
+
+/* Blog */
+
+.tag-list {
+	width: 200;
+	margin: 85 40 20 20;
+}

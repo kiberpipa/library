@@ -18,6 +18,7 @@ setup(name='liby',
       zip_safe=False,
       install_requires=[
             'django-grappelli',
+            'django-taggit',
       ],
       entry_points="""
       # -*- Entry points: -*-

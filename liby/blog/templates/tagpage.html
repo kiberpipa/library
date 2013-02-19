@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Posts tagged: <span class="label label-inverse">{{tag}}</span> </h2>
+
+{% for post in posts %}
+
+<p>{{ post.created|date:"Y-m-d" }}: <a href="/blog/{{post.id}}">{{ post.title }}</a></p>
+
+{% endfor %}
+
+{% endblock %}

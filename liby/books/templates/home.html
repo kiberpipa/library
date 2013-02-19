@@ -40,7 +40,7 @@ Seek electricity...........
 		<th>Leto izdaje</th>
 		<th>Zaloznik</th>
 		<th>Zanr</th>
-		<th>Navoljo</th>
+		<th>Na voljo</th>
 		<th>Rezervirano</th>
 		<th>Citalnisko gradivo</th>
 	</tr>
@@ -51,9 +51,28 @@ Seek electricity...........
 		<td>{{book.pub_date}}</td>
 		<td>{{book.publisher}}</td>
 		<td>{{book.gendre}}</td>
-		<td>{{book.available}}</td>
-		<td>{{book.reserved}}</td>
-		<td>{{book.reading_room_only}}</td>
+		<td>
+			{% if book.available %}
+			<span class="badge badge-success">Da</span>
+			{% else %}
+			<span class="badge badge-important">Ne</span>
+			{% endif %}
+
+		</td>
+		<td>
+			{% if book.reserved %}
+			<span class="badge badge-important">Da</span>
+			{% else %}
+			<span class="badge badge-success">Ne</span>
+			{% endif %}
+		</td>
+		<td>
+			{% if book.reading_room_only  %}
+			<span class="badge badge-info">Da</span>
+			{% else %}
+			<span class="badge badge-success">Ne</span>
+			{% endif %}
+		</td>
 	</tr>
 	{% endfor %}
 </table>

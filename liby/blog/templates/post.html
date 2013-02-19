@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3><a href="/blog/{{blogpost.id}}">{{ blogpost.title }}</a></h3>
+
+<div class="post_meta">
+  <i>on {{ blogpost.created }}</i>
+</div>
+
+<div class="post_body">
+  {{ blogpost.body|safe|linebreaks }}
+</div>
+
+<div class="tags">
+  {% for tag in blogpost.tags.all %}
+  <a href="/blog/tag/{{tag}}"><span class="label label-inverse">{{tag}}</span></a>
+  {% if not forloop.last %} {% endif %} 
+  {% endfor %}
+</div>
+
+{% endblock %}
