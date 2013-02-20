@@ -19,6 +19,7 @@ setup(name='liby',
       install_requires=[
             'django-grappelli',
             'django-taggit',
+            'django-disqus',
       ],
       entry_points="""
       # -*- Entry points: -*-

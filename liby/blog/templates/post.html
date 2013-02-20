@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load disqus_tags %}
 
 {% block content %}
 
@@ -11,6 +12,8 @@
 <div class="post_body">
   {{ blogpost.body|safe|linebreaks }}
 </div>
+
+{% disqus_show_comments %}
 
 <div class="tags">
   {% for tag in blogpost.tags.all %}
