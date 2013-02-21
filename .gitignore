@@ -29,3 +29,6 @@ pip-log.txt
 # Grappelli
 grappelli
 admin
+
+# Secret is secret
+liby/secrets.py
