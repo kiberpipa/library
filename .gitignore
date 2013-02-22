@@ -31,3 +31,5 @@ liby/secrets.py
 
 # ignore collected static files
 static
+
+buildout.cfg
