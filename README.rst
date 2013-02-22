@@ -7,6 +7,8 @@ You need `git` installed on your system.
 
 ``cd library``
 
+``ln -s buildout.d/development.cfg buildout.cfg``
+
 ``python bootstrap.py -v 1.7.0``
 
 ``bin/buildout``
