@@ -6,19 +6,18 @@
   <h4>
     Tags:
   </h4>
-  <p> 
-    Pred več ko dvjesto leti, nam štorja govori,
-    da strašno so nervozni bli naši nonoti,
-    če kej jim je sfalilo, če kej jim ni blo prov,
-    so grofa tko ku prasca nataknli na kol.
-  </p>
+  <ul>
+    {% for tag in tags %}
+    <li><a href={% url tagpage tag %}>{{ tag }}</li>
+    {% endfor %}
+  </ul>
 </div>
 {% endblock %}
 
 
 {% block content %}
 
-{% for post in object_list %}
+{% for post in queryset %}
 
 <div class="post">
 

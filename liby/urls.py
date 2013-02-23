@@ -32,16 +32,13 @@ urlpatterns += patterns('django.contrib.flatpages.views',
 
 # Blog
 urlpatterns += patterns('liby.blog.views',
-    url(r'^blog/$', ListView.as_view(
-                           queryset=BlogPost.objects.all().order_by("-created")[:6],
-                           template_name="blog.html"),
-                           name="blog"),
+    url(r'^blog/$', 'blog', name="blog"),
     url(r'^blog/(?P<pk>\d+)$', DetailView.as_view(
                            model=BlogPost,
                            template_name="post.html")),
     url(r'^blog/archives/$', ListView.as_view(
                            queryset=BlogPost.objects.all().order_by("-created"),
                            template_name="archives.html")),
-    url(r'^blog/tag/(?P<tag>\w+)$', 'tagpage'),
+    url(r'^blog/tag/(?P<tag>\w+)$', 'tagpage', name="tagpage"),
     url(r'^blog/feed/$', BlogFeed()),
 )
