@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+
+{% block extrahead %}
+
+{{ block.super }}
+<link href="{% url blogfeed %}" type="application/atom+xml" rel="alternate" title="Knjiznica Feed" />
+
+{% endblock %}
+
 {% block right_block %}
 
 <div class="tag-list well pull-right">

@@ -40,5 +40,5 @@ urlpatterns += patterns('liby.blog.views',
                            queryset=BlogPost.objects.all().order_by("-created"),
                            template_name="archives.html")),
     url(r'^blog/tag/(?P<tag>\w+)$', 'tagpage', name="tagpage"),
-    url(r'^blog/feed/$', BlogFeed()),
+    url(r'^blog/feed/$', BlogFeed(), name="blogfeed"),
 )
