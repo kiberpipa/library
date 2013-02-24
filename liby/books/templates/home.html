@@ -1,19 +1,24 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 
-{{ flatpage.content }}
+{% autoescape off %}
+
+	{{ flatpage.content }}
+
+{% endautoescape %}
 
 {% block books-table %}
 <table class="table table-striped table-hover">
 	<tr>
-		<th>Naslov</th>
-		<th>Avtor</th>
-		<th>Leto izdaje</th>
-		<th>Zaloznik</th>
-		<th>Zanr</th>
-		<th>Na voljo</th>
-		<th>Rezervirano</th>
-		<th>Citalnisko gradivo</th>
+		<th>{% trans "Naslov" %}</th>
+		<th>{% trans "Avtor" %}</th>
+		<th>{% trans "Leto izdaje" %}</th>
+		<th>{% trans "Zaloznik" %}</th>
+		<th>{% trans "Zanr" %}</th>
+		<th>{% trans "Na voljo" %}</th>
+		<th>{% trans "Rezervirano" %}</th>
+		<th>{% trans "Citalnisko gradivo" %}</th>
 	</tr>
 	{% for book in books %}
 	<tr>
