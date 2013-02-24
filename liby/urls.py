@@ -9,7 +9,7 @@ from liby.blog.feed import BlogFeed
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^katalog/$', 'liby.books.views.home', name='katalog'),
+    url(r'^katalog/$', 'liby.books.views.books', name='katalog'),
     # url(r'^liby/', include('liby.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
