@@ -18,6 +18,12 @@
 
 {% block content %}
 
+{% autoescape off %}
+
+{{ flatpage.content }}
+
+{% endautoescape %}
+
 {% for post in queryset %}
 
 <div class="post">

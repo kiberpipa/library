@@ -1,16 +1,18 @@
 # Create your views here.
 from django.shortcuts import render_to_response, render
 from django.template import RequestContext
+from django.contrib.flatpages.models import FlatPage
 
 from liby.blog.models import BlogPost
 
 
 def blog(request):
     """docstring for blog"""
+    flatpage = FlatPage.objects.get(url="/blog/")
     queryset = BlogPost.objects.all().order_by("-created")[:5]
     tags = BlogPost.objects.values('tags__name').distinct()
     tags = [tag["tags__name"] for tag in tags]
-    return render(request, "blog.html", {"queryset": queryset, 'tags': tags})
+    return render(request, "blog.html", {"queryset": queryset, 'tags': tags, "flatpage": flatpage})
 
 
 def tagpage(request, tag):
