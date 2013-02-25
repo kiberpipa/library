@@ -24,9 +24,9 @@
 	<tr>
 		<td>{{book.title}}</td>
 		<td>{{book.author}}</td>
-		<td>{{book.pub_date}}</td>
-		<td>{{book.publisher}}</td>
-		<td>{{book.gendre}}</td>
+		<td>{{book.pub_date|default_if_none:"/"}}</td>
+		<td>{{book.publisher|default_if_none:"/"}}</td>
+		<td>{{book.gendre|default_if_none:"/"}}</td>
 		<td>
 			{% if book.available %}
 			<span class="badge badge-success">Da</span>
