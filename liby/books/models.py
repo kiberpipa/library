@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Author(models.Model):
     """Model representing a book/smt author"""
     name = models.CharField(max_length=100)
@@ -7,10 +8,11 @@ class Author(models.Model):
     def __unicode__(self):
             return self.name
 
+
 class Genre(models.Model):
     """
     Model representing a gendre.
-    
+
     For example: drama, IT, horor
     """
     gendre_name = models.CharField(max_length=20)
@@ -25,6 +27,7 @@ class Publisher(models.Model):
 
     def __unicode__(self):
             return self.name
+
 
 class Item(models.Model):
     """Model representing a book or e-material."""
@@ -43,3 +46,15 @@ class Book(Item):
     reading_room_only = models.BooleanField(default=False)
     available = models.BooleanField(default=True)
     reserved = models.BooleanField(default=False)
+    isbn = models.CharField(max_length=100)
+
+    def clean(self):
+        """docstring for clean"""
+        from django.core.exceptions import ValidationError
+        self.isbn = self.isbn.replace("-", "").replace(" ", "")
+        if not self.isbn.isdigit():
+            raise ValidationError("ISBN must be a digit !!!")
+        if len(self.isbn) == 10:
+            self.isbn = "978" + self.isbn
+        if len(self.isbn) != 13:
+            raise ValidationError("Lenght is invalid (must be 10 or 13) !!!")
