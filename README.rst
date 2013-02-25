@@ -19,6 +19,7 @@ Run:
 
 to create the database and make a super user.
 
+``bin/django migrate``
 
 ``bin/django runserver``
 
