@@ -6,5 +6,65 @@
       "domain": "knjiznica.kiberpipa.org",
       "name": "knjiznica.kiberpipa.org"
     }
+  },
+  {
+    "pk": 2,
+    "model": "flatpages.flatpage",
+    "fields": {
+      "registration_required": false,
+      "title": "Blog",
+      "url": "/blog/",
+      "template_name": "",
+      "sites": [
+        1
+      ],
+      "content": "<h2>Blog</h2>\r\n\r\n<p> tole lahko urejam </p>",
+      "enable_comments": false
+    }
+  },
+  {
+    "pk": 3,
+    "model": "flatpages.flatpage",
+    "fields": {
+      "registration_required": false,
+      "title": "Katalog",
+      "url": "/katalog/",
+      "template_name": "",
+      "sites": [
+        1
+      ],
+      "content": "<h1>Katalog</h1>\r\n\r\n<p>Tole lahko urejam</p>",
+      "enable_comments": false
+    }
+  },
+  {
+    "pk": 1,
+    "model": "flatpages.flatpage",
+    "fields": {
+      "registration_required": false,
+      "title": "O nas",
+      "url": "/o-nas/",
+      "template_name": "",
+      "sites": [
+        1
+      ],
+      "content": "<h2>Kdo je kiberknji\u017enica? </h2>\r\n\r\n\r\nProjekt KiberKnji\u017enica je prototip novodobne knji\u017enice, ki raziskuje \u017eivljenjski krog knjige v informacijski dobi. V projektu se ukvarjamo z vlogo uporabni\u0161kih vmesnikov, procesom digitalizacije, grajenjem zbirk knjig tako v fizi\u010dni kot v digitalni obliki in z razli\u010dnimi oblikami dostopanja (odpira prostor branja in diskutiranja o knjigah) ter vlogo ljudi. Promoviramo prost dostop do informacij in znanja. V naslednjih letih \u017eelimo prispevati k izbolj\u0161anju uporabni\u0161ke izku\u0161nje uporabe digitalnih in tiskanih vsebin, raziskovati sobivanje tiskane in elektronske knjige ter tako tudi prispevati k spreminjanju odnosa do branja tiskanega in digitalnega medija. Ideja je v Kiberpipi rasla \u017ee nekaj \u010dasa in je svoje korenine razvila na festivalu HAIP. Raziskuje, v kolik\u0161ni meri je bralec v informacijski dobi pripravljen sodelovati v knji\u017enici\r\n\r\n<h2>Kaj delamo in zakaj?</h2>\r\nMarcell Mars pravi [1], da za knji\u017enico potrebujemo tri gradnike: knjige, katalog in knji\u017eni\u010darja. KiberKnji\u017enica se ukvarja z raziskavo vlog teh treh gradnikov.\r\nKNJIGE Knjige niso ve\u010d le v obliki fizi\u010dnega medija, zaradi \u010desar je proizvodnja in omogo\u010danje dostopa do vsebin dobilo popolnoma nove dimenzije. Ne hranimo jih ve\u010d le v institucijah, ki imajo nad njihovim omogo\u010danjem dostopa nadzor, ampak do njih lahko dostopamo kadarkoli na internetu, neomejeno glede na koli\u010dino isto\u010dasnih izposojevalcev in delanje kopij je brezpla\u010dno. Mre\u017eijo in \u0161irijo se predvsem po principu dobrih medsebojnih feedbackov, s \u010dimer se spreminja tudi njihovo socialno \u017eivljenje. To pa seveda vpliva tako na njeno oblikovanje, prikaz, kot tudi na sam proces ustvarjanja. Ob tem lahko brez omahovanja trdimo, da se t.im. tradicionalne, tiskane knjige, \u0161e vedno dokazujejo kot aktualen, dru\u017ebeno pozitivno sprejet medij namenjen za shranjevanje in posredovanje vsebin. In to ne glede na razvoj tehnologije ter pozicije tiskane knjige v dru\u017ebi znanja.\r\nKNJI\u017dNI\u010cAR S tem, ko knji\u017eni\u010darji nimajo ve\u010d vloge Svetega Petra, ki je edini ki omogo\u010da dostop do knjig, ampak oblikovalec oporabni\u0161ke izku\u0161nje, vsak bralec knjige postane tudi knji\u017eni\u010dar. S sistemom priporo\u010danja, mo\u017enostjo vna\u0161anja vsebin in izposoje gradiva sooblikuje knji\u017eno zbirko ter z ostalimi knji\u017eni\u010darji deli neposredne izku\u0161nje gradiva in vsebin. Vmesniki oz. posredniki (biv\u0161i bibliotekarji) prevzamejo v celotnem sistemu vlogo kustosa oz. skrbnika sistema, baze podatkov pa se zaradi digitalnih zmo\u017enosti med seboj la\u017eje povezujejo in komunicirajo.\r\nKATALOG Seveda ne smemo pozabiti na spremembe v vlogi kataloga: V informacijski dobi je ena pomembnej\u0161ih sposobnosti, znati poiskati prave in za tisti trenutek primerne informacije. Katalog tokrat ne zavzema le vloge lociranja gradiva, temve\u010d nam \u017ee omogo\u010da samo dostopanje do knjig.\r\nKiberKnji\u017enica raziskuje spremembe tako, da na interaktiven na\u010din povezuje vse akterje, ki knjige ustvarjajo, distribuirajo, berejo in druga\u010de oblikujejo njihovo dru\u017ebeno \u017eivljenje. Zavzema za aktivno vklju\u010devanje javnosti v debato o ustvarjanju in uporabi knjig ter za vzpostavljanje novih na\u010dinov dostopanja in dojemanja digitalnega gradiva.\r\n\r\n\r\n<h2>Kako postanem \u010dlan? / Kako lahko sodelujem?</h2>\r\n\r\n\r\n<h2> Podobni projekti </h2>\r\n(Marcell Mars: Free books for every soul, archive.org\r\n\r\n\r\n<h2>Kdaj smo odprti?</h2>\r\n\r\n\r\n<h2>S kom sodelujemo? </h2>\r\n\r\n(Mama, http://tabularasa.hr/?), E-bralniki: Tamara",
+      "enable_comments": false
+    }
+  },
+  {
+    "pk": 4,
+    "model": "flatpages.flatpage",
+    "fields": {
+      "registration_required": false,
+      "title": "Skener",
+      "url": "/skener/",
+      "template_name": "",
+      "sites": [
+        1
+      ],
+      "content": "<h2>Knji\u017eni skener</h2>\r\n\r\n<h4>Pravila za Skeniranje:</h4>\r\n<ol>\r\n<li>ste pisec </li>\r\n<li>pisec je \u017ee 70' let pod ru\u0161o</li>\r\n<li>gradivo boste skenirali za lastno pirivatno uporabo.  #mi se ne ukvarjamo s tem, kaj delate in komu boste to posojali, ampak ne vpletjte nas. Mi samo nudimo service skeniranja</li>\r\n</ol>\r\n\r\n<h2>Kaj to je, kdo ga je naredil </h2>\r\n\r\n<p>\r\nV P2P Javni knji\u017enici ima skener knjig zelo pomembno vlogo. Spominja nas na svet zunaj digitalnih omre\u017eij, kjer knjige, ki jih ho\u010demo digitalizirati, beremo, se jih dotikamo, jih vonjamo in razkazujemo.\r\n</p>\r\n\r\n<p>\r\nNa\u0161 preljubi skener knjig spominja svet zunaj digitalnih mre\u017e na to, kako poceni in lahko je digitalizirati u\u010dbenike za osnovne \u0161ole ali pa knjige brez ponatisov, ki \u0161e imajo bralce. Ministrstva izumirajo\u010dih jezikov bo spomnil na to, kako lahko je bilo v daljnem letu 2012 digitalizirati njihovo kulturno zapu\u0161\u010dino, \u0161e preden so jo veliki jeziki potisnili v pozabo.\r\n</p>\r\n\r\n<p>\r\n\u00bbNaredi sam\u00ab skener knjig danes stoji ob boku Gutenbergovemu tiskarskemu stroju, da nas spomni na to, kaj bi spodbujanje \u0161irjenja znanja lahko pomenilo. Govori se, da bo to\u010dno ta prizor v javni knji\u017enici festivala HAIP 2012 velikokrat posnet z instagramom.\r\n</p>\r\n<p>\r\nBilo mi je v veliko veselje in \u010dast gledati Vojo Antoni\u0107a, enega od redkih renesan\u010dnih mo\u017e dana\u0161njega \u010dasa, ob sestavljanju \u00bbnaredi sam\u00ab knji\u017enega skenerja. Za vse, ki bi si ga \u017eeleli izdelati tudi sami, je Voja pripravil \u00bbnaredi sam\u00ab P2P javno knji\u017enico. Podrobna navodila si lahko preberete na angle\u0161ki strani.\r\nNenad Romi\u0107 a.k.a. Marcell Mars\r\n</p>\r\n\r\n<h2>Navodila kako narediti skener:</h2>\r\n\r\nhttp://2012.haip.cc/en/10/28/our-beloved-bookscanner/",
+      "enable_comments": false
+    }
   }
 ]
