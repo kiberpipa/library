@@ -46,7 +46,7 @@ class Book(Item):
     reading_room_only = models.BooleanField(default=False)
     available = models.BooleanField(default=True)
     reserved = models.BooleanField(default=False)
-    isbn = models.CharField(max_length=100)
+    isbn = models.CharField(max_length=20, blank=True, null=True)
 
     def clean(self):
         """docstring for clean"""
