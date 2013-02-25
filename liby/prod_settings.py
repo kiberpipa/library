@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'taggit',
     'disqus',
+    'south',
     ###########
     ###########
     'liby.books',

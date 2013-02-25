@@ -20,6 +20,7 @@ setup(name='liby',
             'django-grappelli',
             'django-taggit',
             'django-disqus',
+            'south',
       ],
       entry_points="""
       # -*- Entry points: -*-
