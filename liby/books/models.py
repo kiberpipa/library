@@ -3,7 +3,7 @@ from django.db import models
 
 class Author(models.Model):
     """Model representing a book/smt author"""
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
 
     def __unicode__(self):
             return self.name
