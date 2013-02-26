@@ -9,13 +9,24 @@ class BookInline(admin.TabularInline):
     extra = 0
 
 
-class MaterialAdmin(admin.ModelAdmin):
+class BookAdmin(admin.ModelAdmin):
     inlines = [
         BookInline,
     ]
 
+
+class AuthorsInline(admin.TabularInline):
+    model = Book.authors.through
+    extra = 0
+
+
+class AuthorsAdmin(admin.ModelAdmin):
+    inlines = [
+        AuthorsInline,
+    ]
+
 admin.site.register(Book)
-admin.site.register(Author, MaterialAdmin)
-admin.site.register(Genre, MaterialAdmin)
-admin.site.register(Publisher, MaterialAdmin)
+admin.site.register(Author, AuthorsAdmin)
+admin.site.register(Genre, BookAdmin)
+admin.site.register(Publisher, BookAdmin)
 admin.site.register(BlogPost)

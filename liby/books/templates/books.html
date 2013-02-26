@@ -23,7 +23,11 @@
 	{% for book in books %}
 	<tr>
 		<td>{{book.title}}</td>
-		<td>{{book.author}}</td>
+		<td>
+			{% for author in book.get_authors %}
+			{{author}}{% if not forloop.last %}; {% endif %}
+			{% endfor %}
+		</td>
 		<td>{{book.pub_date|default_if_none:"/"}}</td>
 		<td>{{book.publisher|default_if_none:"/"}}</td>
 		<td>{{book.gendre|default_if_none:"/"}}</td>

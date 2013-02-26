@@ -32,13 +32,17 @@ class Publisher(models.Model):
 class Item(models.Model):
     """Model representing a book or e-material."""
     title = models.CharField(max_length=100)
-    author = models.ForeignKey(Author)
+    authors = models.ManyToManyField(Author)
     pub_date = models.IntegerField('Year published', blank=True, null=True)
     publisher = models.ForeignKey(Publisher, blank=True, null=True)
     gendre = models.ForeignKey(Genre, blank=True, null=True)
 
+    def get_authors(self):
+        names = [e.name for e in self.authors.all()]
+        return names
+
     def __unicode__(self):
-            return "%s - %s" % (self.title, self.author)
+        return "%s - %s" % (self.title, "; ".join(self.get_authors()))
 
 
 class Book(Item):
