@@ -30,6 +30,6 @@ pip-log.txt
 liby/secrets.py
 
 # ignore collected static files
-static
+/static
 
 buildout.cfg
