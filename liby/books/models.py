@@ -51,6 +51,8 @@ class Book(Item):
     def clean(self):
         """docstring for clean"""
         from django.core.exceptions import ValidationError
+        if not self.isbn:
+            return
         self.isbn = self.isbn.replace("-", "").replace(" ", "")
         if not self.isbn.isdigit():
             raise ValidationError("ISBN must be a digit !!!")
