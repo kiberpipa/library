@@ -15,10 +15,10 @@ class Genre(models.Model):
 
     For example: drama, IT, horor
     """
-    gendre_name = models.CharField(max_length=20)
+    genre_name = models.CharField(max_length=20, unique=True)
 
     def __unicode__(self):
-            return self.gendre_name
+            return self.genre_name
 
 
 class Publisher(models.Model):
@@ -32,14 +32,19 @@ class Publisher(models.Model):
 class Item(models.Model):
     """Model representing a book or e-material."""
     title = models.CharField(max_length=100)
-    authors = models.ManyToManyField(Author)
+    authors = models.ManyToManyField(Author, related_name="item_authors_set")
     pub_date = models.IntegerField('Year published', blank=True, null=True)
     publisher = models.ForeignKey(Publisher, blank=True, null=True)
-    gendre = models.ForeignKey(Genre, blank=True, null=True)
+    genres = models.ManyToManyField(Genre, related_name="item_genres_set", null=True, blank=True)
 
     def get_authors(self):
         names = [e.name for e in self.authors.all()]
         return names
+
+    # DRY
+    def get_genres(self):
+        genres = [e.genre_name for e in self.genres.all()]
+        return genres
 
     def __unicode__(self):
         return "%s - %s" % (self.title, "; ".join(self.get_authors()))
