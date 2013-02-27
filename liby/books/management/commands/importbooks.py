@@ -1,7 +1,6 @@
 import csv
 
 from django.core.management.base import BaseCommand
-from django.db.utils import IntegrityError
 
 from liby.books.models import Book, Author, Genre
 
@@ -38,12 +37,15 @@ class Command(BaseCommand):
 
                     for author_name in authors:
                         try:
+                            author = Author.objects.get(name=author_name)
+                            if author:
+                                print author
+                                book_authors.append(author)
+                        except:
                             author = Author()
                             author.name = author_name
                             author.save()
                             book_authors.append(author)
-                        except IntegrityError:
-                            book_authors.append(Author.objects.get(name=author_name))
 
                     book.authors.add(*book_authors)
                     book.save()
@@ -60,12 +62,15 @@ class Command(BaseCommand):
 
                     for name in genres:
                         try:
+                            genre = Genre.objects.get(genre_name=name)
+                            if genre:
+                                print genre
+                                book_genres.append(genre)
+                        except:
                             genre = Genre()
                             genre.genre_name = name
                             genre.save()
                             book_genres.append(genre)
-                        except IntegrityError:
-                            book_genres.append(Genre.objects.get(genre_name=name))
 
                     book.genres.add(*book_genres)
                     book.save()
