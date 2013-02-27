@@ -1,5 +1,51 @@
 {% extends "base.html" %}
 {% load i18n %}
+
+
+{% block extrahead %}
+{{ block.super }}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/paging.js"></script>
+<script type="text/javascript" >
+$(document).ready(function() {
+	$.extend( $.fn.dataTableExt.oStdClasses, {
+		"sSortAsc": "header headerSortDown",
+		"sSortDesc": "header headerSortUp",
+		"sSortable": "header"
+	} );
+	$('.books-table').dataTable({
+		"oLanguage": {
+			"sEmptyTable":     "V tabeli ni podatkov",
+			"sInfo":           "Prikazujem od _START_ do _END_ od skupaj _TOTAL_ knjig",
+			"sInfoEmpty":      "Prikazujem od 0 do 0 od skupaj 0 knjig",
+			"sInfoFiltered":   "(filtriranih _MAX_ rezultatov)",
+			"sInfoPostFix":    "",
+			"sInfoThousands":  ",",
+			"sLengthMenu":     "Prikazujem _MENU_ rezultatov",
+			"sLoadingRecords": "Nalagam...",
+			"sProcessing":     "Obdelujem...",
+			"sSearch":         "Išči:",
+			"sZeroRecords":    "Iskalni niz ni vrnil rezultata",
+			"oPaginate": {
+				"sFirst":    "Prva",
+				"sLast":     "Zadnja",
+				"sNext":     "Naslednja",
+				"sPrevious": "Prejšna"
+			},
+			"oAria": {
+				"sSortAscending":  ": razvrsti naraščajoče",
+				"sSortDescending": ": razvrsti padajoče"
+			}
+		},
+		"sPaginationType": "bootstrap"
+	});
+
+} );
+</script>
+
+{% endblock %}
+
 {% block content %}
 
 {% autoescape off %}
@@ -9,7 +55,8 @@
 {% endautoescape %}
 
 {% block books-table %}
-<table class="table table-striped table-hover">
+<table class="books-table table table-striped table-hover">
+	<thead>
 	<tr>
 		<th>{% trans "Naslov" %}</th>
 		<th>{% trans "Avtor" %}</th>
@@ -20,6 +67,8 @@
 		<th>{% trans "Rezervirano" %}</th>
 		<th>{% trans "Citalnisko gradivo" %}</th>
 	</tr>
+	</thead>
+	<tbody>
 	{% for book in books %}
 	<tr>
 		<td>{{book.title}}</td>
@@ -61,6 +110,7 @@
 		</td>
 	</tr>
 	{% endfor %}
+	</tbody>
 </table>
 {% endblock %}
 

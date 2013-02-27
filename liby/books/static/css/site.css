@@ -1,11 +1,11 @@
+body {
+	margin-bottom: 10px;
+}
+
 .content {
-	padding: 10px;
 	margin-top: 75px;
 }
 
-table {
-	margin: 20px 0 10px 0;
-}
 
 .side-nav {
 	margin: 20px 0 0 0;
@@ -30,4 +30,34 @@ table {
 .tag-list {
 	width: 200;
 	margin: 85 40 20 20;
+}
+
+/* Table */
+
+div.dataTables_length label {
+    float: left;
+    text-align: left;
+}
+ 
+div.dataTables_length select {
+    width: 75px;
+}
+ 
+div.dataTables_filter label {
+    float: right;
+}
+ 
+div.dataTables_info {
+    padding-top: 8px;
+	float: left;
+}
+ 
+div.dataTables_paginate {
+    float: right;
+    margin: 0;
+}
+ 
+
+table {
+    clear: both;
 }
