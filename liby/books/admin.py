@@ -25,8 +25,19 @@ class AuthorsAdmin(admin.ModelAdmin):
         AuthorsInline,
     ]
 
+
+class GenresInline(admin.TabularInline):
+    model = Book.genres.through
+    extra = 0
+
+
+class GenresAdmin(admin.ModelAdmin):
+    inlines = [
+        GenresInline,
+    ]
+
 admin.site.register(Book)
 admin.site.register(Author, AuthorsAdmin)
-admin.site.register(Genre, BookAdmin)
+admin.site.register(Genre, GenresAdmin)
 admin.site.register(Publisher, BookAdmin)
 admin.site.register(BlogPost)
