@@ -61,7 +61,6 @@ $(document).ready(function() {
 		<th>{% trans "Naslov" %}</th>
 		<th>{% trans "Avtor" %}</th>
 		<th>{% trans "Leto izdaje" %}</th>
-		<th>{% trans "Zaloznik" %}</th>
 		<th>{% trans "Zanr" %}</th>
 		<th>{% trans "Na voljo" %}</th>
 		<th>{% trans "Rezervirano" %}</th>
@@ -78,7 +77,6 @@ $(document).ready(function() {
 			{% endfor %}
 		</td>
 		<td>{{book.pub_date|default_if_none:"/"}}</td>
-		<td>{{book.publisher|default_if_none:"/"}}</td>
 		<td>
 			{% if book.genres %}
 			{% for genre in book.get_genres %}
