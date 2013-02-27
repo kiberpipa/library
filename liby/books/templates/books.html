@@ -30,7 +30,13 @@
 		</td>
 		<td>{{book.pub_date|default_if_none:"/"}}</td>
 		<td>{{book.publisher|default_if_none:"/"}}</td>
-		<td>{{book.gendre|default_if_none:"/"}}</td>
+		<td>
+			{% if book.genres %}
+			{% for genre in book.get_genres %}
+			{{genre}}{% if not forloop.last %}; {% endif %}
+			{% endfor %}
+			{% endif %}
+		</td>
 		<td>
 			{% if book.available %}
 			<span class="badge badge-success">Da</span>
