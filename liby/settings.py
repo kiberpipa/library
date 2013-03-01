@@ -1,5 +1,8 @@
 # Django settings for liby project.
-from liby.secrets import *
+try:
+    from liby.secrets import *
+except ImportError:
+    pass
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
