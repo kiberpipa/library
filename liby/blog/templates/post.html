@@ -10,7 +10,11 @@
 </div>
 
 <div class="post_body">
-  {{ blogpost.body|safe|linebreaks }}
+
+{% autoescape off %}
+  {{ blogpost.body}}
+{% endautoescape %}
+
 </div>
 
 {% disqus_show_comments %}
