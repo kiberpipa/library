@@ -22,7 +22,9 @@ body {
 .navbar .nav>li>button { color:white;margin-top:22px }
 .navbar .navbar-search { margin-top: 20px; margin-left: 10px}
 
-.navbar img {margin: 5px 30px 5px 5px;}
+.navbar img {margin: 10px 5px 5px -10px;}
+
+.navbar h3 {padding: 14px 0px; margin: 0; color: black;;}
 
 
 /* Blog */
