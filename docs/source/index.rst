@@ -28,7 +28,7 @@ Or find us on IRC channel #kiberpipa on irc.sioff.net server.
 Code, issue tracker
 +++++++++++++++++++
 
-Code and issue tracker are hosted on `gihub <https://github.com/kiberpipa/library>`_.
+Code and issue tracker are hosted on `github <https://github.com/kiberpipa/library>`_.
 
    - `Code <https://github.com/kiberpipa/library>`_
    - `Issues <https://github.com/kiberpipa/library/issues>`_
