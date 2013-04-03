@@ -33,3 +33,9 @@ liby/secrets.py
 /static
 
 buildout.cfg
+
+# Ignore virtual env 
+
+.Python
+include
+lib
