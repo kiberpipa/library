@@ -3,16 +3,15 @@
 # Packages
 *.egg
 *.egg-info
-.installed.cfg
-bin
-build
-develop-eggs
 dist
+build
 eggs
 parts
-sdist
-src
+bin
 var
+sdist
+develop-eggs
+.installed.cfg
 
 # Installer logs
 pip-log.txt
