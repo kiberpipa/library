@@ -1,0 +1,17 @@
+language: python
+python:
+  - 2.7
+
+install:
+  - virtualenv --no-site-packages .
+  - bin/python bootstrap.py -d --version 1.7.1
+  - bin/buildout
+
+script:
+  - bin/django test blog
+  - bin/django test books
+
+notifications:
+  mail:
+    - brodul@brodul.org
+    - "irc.sioff.net#kiberpipa"
