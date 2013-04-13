@@ -3,8 +3,8 @@ python:
   - 2.7
 
 install:
-  - virtualenv --no-site-packages .
-  - bin/python bootstrap.py -d --version 1.7.1
+  - ln -s buildout.d/travis.cfg buildout.cfg
+  - python bootstrap.py -d --version 1.7.1
   - bin/buildout
 
 script:
@@ -14,4 +14,5 @@ script:
 notifications:
   mail:
     - brodul@brodul.org
+  irc:
     - "irc.sioff.net#kiberpipa"
